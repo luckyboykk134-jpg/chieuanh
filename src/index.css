@@ -112,3 +112,13 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 1. Ép toàn bộ các thẻ bọc ngoài cùng không được giới hạn độ rộng và không được giấu phần thừa */
+html, body, #root, .min-h-screen {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: visible !important; /* Không cho phép giấu phần code tràn */
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #f8fafc !important; /* Đảm bảo nền sáng toàn trang, không bị đen */
+}
